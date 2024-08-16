@@ -565,7 +565,7 @@ PRODUCT_PACKAGES += \
     libxditk_ditArchLIB \
     libxditk_ditBSP \
     libxditk_ditBSP_JNI \
-    com.qualcomm.qti.dpm.api@1.0 \
+    com.qualcomm.qti.dpm.api@1.0_vendor \
     com.qualcomm.qti.imscmservice@2.0 \
     com.qualcomm.qti.imscmservice@2.1 \
     com.qualcomm.qti.imscmservice@2.2 \
