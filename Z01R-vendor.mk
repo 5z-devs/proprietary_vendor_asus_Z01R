@@ -391,7 +391,6 @@ PRODUCT_PACKAGES += \
     libAsusRGBSensorHAL \
     libAsusShowFPS \
     libAsusZeniMoji \
-    libOmxVpp \
     libSensorManagerHAL \
     liba2dpoffload \
     libacdb-fts \
