@@ -366,6 +366,7 @@ PRODUCT_PACKAGES += \
     libllvm-qcom \
     libmdmdetect \
     libmdsprpc \
+    libmmosal \
     libmulawdec \
     libperfconfig \
     libperfgluelayer \
