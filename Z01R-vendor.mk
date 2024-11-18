@@ -274,7 +274,7 @@ PRODUCT_PACKAGES += \
     libqvr_cam_dsp_driver_skel \
     libqvr_dsp_driver_skel \
     btaudio_offload_if \
-    com.qualcomm.qti.ant@1.0 \
+    com.qualcomm.qti.ant@1.0_vendor \
     eglSubDriverAndroid \
     libEGL_adreno \
     libGLESv1_CM_adreno \
