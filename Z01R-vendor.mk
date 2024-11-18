@@ -641,7 +641,6 @@ PRODUCT_PACKAGES += \
     libsettings \
     libslimclient \
     libsystem_health_mon \
-    libtrustedapploader \
     libvendor.goodix.hardware.fingerprintextension@1.0 \
     libwms \
     libwqe \
