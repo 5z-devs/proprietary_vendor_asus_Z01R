@@ -263,10 +263,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libqvrcamera_client.qti \
     libqvrservice_client.qti \
-    libsns_device_mode_stub \
-    libsns_fastRPC_util \
-    libsns_low_lat_stream_stub \
-    libeye_tracking_dsp_sample_stub \
     libqvr_cam_cdsp_driver_stub \
     libqvr_cdsp_driver_stub \
     libqvr_eyetracking_plugin \
