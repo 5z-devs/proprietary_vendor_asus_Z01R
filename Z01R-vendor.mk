@@ -504,7 +504,6 @@ PRODUCT_PACKAGES += \
     libAsusShowFPS \
     libAsusZeniMoji \
     libOmxDsdDec \
-    libOmxVideoDSMode \
     libSensorManagerHAL \
     libadm \
     libadpcmdec \
