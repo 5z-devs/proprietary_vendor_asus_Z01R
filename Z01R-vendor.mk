@@ -746,7 +746,6 @@ PRODUCT_PACKAGES += \
     libscveT2T_skel \
     libsns_device_mode_skel \
     libsns_low_lat_stream_skel \
-    vendor.qti.hardware.audiohalext@1.0 \
     com.qualcomm.qti.ant@1.0 \
     fm_helium \
     libantradio \
