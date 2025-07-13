@@ -442,7 +442,6 @@ cc_prebuilt_library_shared {
                 "libbase",
                 "libcutils",
                 "libhidlbase",
-                "libhidltransport",
                 "liblog",
                 "libutils",
                 "libdiag",
