@@ -111,6 +111,7 @@ PRODUCT_COPY_FILES += \
     vendor/asus/Z01R/proprietary/vendor/etc/init/netmgrd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/netmgrd.rc \
     vendor/asus/Z01R/proprietary/vendor/etc/init/port-bridge.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/port-bridge.rc \
     vendor/asus/Z01R/proprietary/vendor/etc/init/qcrild.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qcrild.rc \
+    vendor/asus/Z01R/proprietary/vendor/etc/init/qdcmss.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qdcmss.rc \
     vendor/asus/Z01R/proprietary/vendor/etc/init/qseecomd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/qseecomd.rc \
     vendor/asus/Z01R/proprietary/vendor/etc/init/vendor.display.color@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.display.color@1.0-service.rc \
     vendor/asus/Z01R/proprietary/vendor/etc/init/vendor.qti.adsprpc-guestos-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.adsprpc-guestos-service.rc \
@@ -124,6 +125,7 @@ PRODUCT_COPY_FILES += \
     vendor/asus/Z01R/proprietary/vendor/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.sensorscalibrate@1.0-service.rc \
     vendor/asus/Z01R/proprietary/vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.soter@1.0-service.rc \
     vendor/asus/Z01R/proprietary/vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc \
+    vendor/asus/Z01R/proprietary/vendor/etc/init/vendor.qti.qspmhal@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.qspmhal@1.0-service.rc \
     vendor/asus/Z01R/proprietary/vendor/etc/init/vendor.qti.rmt_storage.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.rmt_storage.rc \
     vendor/asus/Z01R/proprietary/vendor/etc/init/vendor.qti.tftp.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.tftp.rc \
     vendor/asus/Z01R/proprietary/vendor/etc/init/vppservice.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vppservice.rc \
@@ -140,6 +142,7 @@ PRODUCT_COPY_FILES += \
     vendor/asus/Z01R/proprietary/vendor/etc/qdcm_calib_data_nt35597_video_mode_dsi_truly_panel_with_DSC.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_nt35597_video_mode_dsi_truly_panel_with_DSC.xml \
     vendor/asus/Z01R/proprietary/vendor/etc/scve/facereco/gModel.dat:$(TARGET_COPY_OUT_VENDOR)/etc/scve/facereco/gModel.dat \
     vendor/asus/Z01R/proprietary/vendor/etc/seccomp_policy/imsrtp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/imsrtp.policy \
+    vendor/asus/Z01R/proprietary/vendor/etc/seccomp_policy/qspm.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/qspm.policy \
     vendor/asus/Z01R/proprietary/vendor/etc/sensors/config/ak0991x_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/ak0991x_0.json \
     vendor/asus/Z01R/proprietary/vendor/etc/sensors/config/default_sensors.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/default_sensors.json \
     vendor/asus/Z01R/proprietary/vendor/etc/sensors/config/icm206xx_0.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/icm206xx_0.json \
@@ -266,6 +269,7 @@ PRODUCT_PACKAGES += \
     libCB \
     libOpenCL \
     libVkLayer_q3dtools \
+    libadreno_app_profiles \
     libadreno_utils \
     libadsp_default_listener \
     libadsprpc \
@@ -337,6 +341,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.scve.panorama@1.0 \
     vendor.qti.hardware.vpp@1.1 \
     vendor.qti.hardware.vpp@1.2 \
+    vendor.qti.qspmhal@1.0 \
     com.qti.eeprom.truly_cmb433 \
     com.qti.sensor.imx363 \
     com.qti.sensor.ov8856_front \
@@ -518,7 +523,9 @@ PRODUCT_PACKAGES += \
     libdataitems \
     libdisp-aba \
     libdisplayqos \
+    libdisplayskuutils \
     libdpmqmihal \
+    libdpps \
     libdrmfs \
     libdrmtime \
     libdsi_netctrl \
@@ -577,8 +584,8 @@ PRODUCT_PACKAGES += \
     libril-qcril-hook-oem \
     librilqmiservices \
     librpmb \
-    libsdedrm \
     libsdm-color \
+    libsdm-colormgr-algo \
     libsdm-diag \
     libsdm-disp-vndapis \
     libsdmextension \
@@ -686,6 +693,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.imsrtpservice@3.0_vendor \
     vendor.qti.latency@2.0 \
     vendor.qti.latency@2.1 \
+    vendor.qti.qspmhal@1.0-impl \
     vendor_lib_rfsa_adsp_awinic_mec_so \
     vendor_lib_rfsa_adsp_capi_v2_aptX_Classic_so \
     vendor_lib_rfsa_adsp_capi_v2_aptX_HD_so \
@@ -783,7 +791,6 @@ PRODUCT_PACKAGES += \
     loc_launcher \
     lowi-server \
     mlid \
-    mm-pp-dpps \
     msm_irqbalance \
     netmgrd \
     onFgAppChanged \
@@ -793,6 +800,7 @@ PRODUCT_PACKAGES += \
     port-bridge \
     power_off_alarm \
     ppd \
+    qdcmss \
     qrtr-cfg \
     qrtr-lookup \
     qrtr-ns \
@@ -806,6 +814,7 @@ PRODUCT_PACKAGES += \
     tftp_server \
     thermal-engine \
     time_daemon \
+    vendor.qti.qspmhal@1.0-service \
     vppservice \
     xtra-daemon \
     xtwifi-client \
